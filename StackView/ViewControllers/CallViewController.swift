@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CallViewController.swift
 //  StackView
 //
 //  Created by SeongMinK on 2021/09/16.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CallViewController: UIViewController {
 
     @IBOutlet weak var phoneNumberLabel: UILabel!
     
@@ -28,6 +28,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        self.navigationController?.isNavigationBarHidden = false
         
         for btnItem in phoneNumberBtns {
             btnItem.addTarget(self, action: #selector(onNumberBtnClicked(sender:)), for: .touchUpInside)
